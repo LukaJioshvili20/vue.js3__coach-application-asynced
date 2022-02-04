@@ -49,10 +49,10 @@ export default {
 
 <style scoped>
 form {
-  margin: 1rem;
   border: 1px solid #ccc;
   border-radius: 12px;
   padding: 1rem;
+  margin-top: 1rem;
 }
 
 .form-control {
@@ -72,6 +72,7 @@ textarea {
   font: inherit;
   border: 1px solid #ccc;
   padding: 0.15rem;
+  resize: none;
 }
 
 input:focus,

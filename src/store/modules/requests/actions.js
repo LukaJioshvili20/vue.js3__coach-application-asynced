@@ -5,7 +5,7 @@ export default {
       message: payload.message
     };
     const response = await fetch(
-      `https://vue-http-demo-85e9e.firebaseio.com/requests/${payload.coachId}.json`,
+      `https://coachapplication-cc745-default-rtdb.europe-west1.firebasedatabase.app/requests/${payload.coachId}.json`,
       {
         method: 'POST',
         body: JSON.stringify(newRequest)
@@ -30,7 +30,7 @@ export default {
     const coachId = context.rootGetters.userId;
     const token = context.rootGetters.token;
     const response = await fetch(
-      `https://vue-http-demo-85e9e.firebaseio.com/requests/${coachId}.json?auth=` +
+      `https://coachapplication-cc745-default-rtdb.europe-west1.firebasedatabase.app/requests/${coachId}.json?auth=` +
         token
     );
     const responseData = await response.json();

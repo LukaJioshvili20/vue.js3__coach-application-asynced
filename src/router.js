@@ -55,6 +55,8 @@ const router = createRouter({
 });
 
 router.beforeEach(function(to, _, next) {
+  document.title = `Coach Finder Application`;
+
   if (to.meta.requiresAuth && !store.getters.isAuthenticated) {
     next('/auth');
   } else if (to.meta.requiresUnauth && store.getters.isAuthenticated) {

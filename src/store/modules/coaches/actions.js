@@ -12,7 +12,7 @@ export default {
     const token = context.rootGetters.token;
 
     const response = await fetch(
-      `https://authentication-vue-app-default-rtdb.europe-west1.firebasedatabase.app/coaches/${userId}.json?auth=` +
+      `https://coachapplication-cc745-default-rtdb.europe-west1.firebasedatabase.app/coaches/${userId}.json?auth=` +
         token,
       {
         method: 'PUT',
@@ -37,7 +37,7 @@ export default {
     }
 
     const response = await fetch(
-      `https://authentication-vue-app-default-rtdb.europe-west1.firebasedatabase.app/coaches.json`
+      `https://coachapplication-cc745-default-rtdb.europe-west1.firebasedatabase.app/coaches.json`
     );
     const responseData = await response.json();
 
